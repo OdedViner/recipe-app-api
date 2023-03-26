@@ -71,7 +71,8 @@ def update_value(occupied, seat_id):
     connection.execute(
         """
         UPDATE "Seat" SET "taken"=? WHERE "seat_id"=?
-        """, [occupied, seat_id]
+        """,
+        [occupied, seat_id],
     )
     connection.commit()
     connection.close()

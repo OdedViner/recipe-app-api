@@ -19,8 +19,8 @@ services:
       - DB_PASS=changeme
     depends_on:
       - db
-  
-  db: 
+
+  db:
     image: postgres:13-alpine
     volumes:
       - dev-db-data:/var/lib/postgresql/data
@@ -29,7 +29,5 @@ services:
       - POSTGRES_USER=devuser
       - POSTGRES_PASSWORD=changeme
 
-
 volumes:
   dev-db-data:
-
